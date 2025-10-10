@@ -22,14 +22,11 @@ int main(){
     int t;
     cin >> t;
     while(t--){
-        int n;
-        cin>> n;
-        string x;
+        long long n, m; // Lengths of strings x and s
+        cin >> n >> m;
+        string x; // String x
         cin >> x;
-
-        int m;
-        cin >> m;
-        string s;
+        string s; // String s
         cin >> s;
        
         string x0 = x;
