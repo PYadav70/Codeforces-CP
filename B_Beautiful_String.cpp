@@ -1,12 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-bool isPalindrome(string s) {
-    string t = s;
-    reverse(t.begin(), t.end());
-    return s == t;
-}
-
 int main(){
     int t;
     cin >> t;
@@ -16,17 +10,22 @@ int main(){
         cin >> n;
         string s;
         cin >> s;
-        
-        if(isPalindrome(s)){
-            cout << 0 << endl;
-            continue;
+        vector<int> pos;
+
+        for(int i = 0; i < n; i++){
+            if(s[i] == '0'){
+                pos.push_back(i + 1);
+            }
         }
-         
-        string p = "";
-        for(char ch : s){
-            if(s[ch] == '0' && s[ch] == '1' )
+
+      
+        cout << (int)pos.size() << "\n";
+
+       
+        if(!pos.empty()){
+            for(auto z : pos) cout << z << ' ';
+            cout << "\n";
         }
-     
-          
     }
+    return 0;
 }
